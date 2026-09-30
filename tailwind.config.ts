@@ -18,7 +18,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				head: ['"Cormorant Garamond"', 'serif'],
+				body: ['"Golos Text"', 'sans-serif']
+			},
 			colors: {
+				bar: {
+					DEFAULT: 'hsl(var(--bar))',
+					foreground: 'hsl(var(--bar-foreground))'
+				},
+				strip: {
+					DEFAULT: 'hsl(var(--strip))',
+					foreground: 'hsl(var(--strip-foreground))'
+				},
+				glow: {
+					DEFAULT: 'hsl(var(--glow))',
+					deep: 'hsl(var(--glow-deep))'
+				},
+				pill: 'hsl(var(--pill))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,6 +86,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-in': {
+					from: { opacity: '0', transform: 'translateY(8px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,6 +108,7 @@ export default {
 				}
 			},
 			animation: {
+				'fade-in': 'fade-in 0.3s ease-out',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}

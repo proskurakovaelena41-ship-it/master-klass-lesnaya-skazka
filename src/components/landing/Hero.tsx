@@ -9,6 +9,7 @@ const menu = [
   { label: "Для кого", id: "for-whom" },
   { label: "Как проходит", id: "steps" },
   { label: "Галерея", id: "gallery" },
+  { label: "Цены", id: "prices" },
   { label: "Записаться", id: "signup" },
 ];
 

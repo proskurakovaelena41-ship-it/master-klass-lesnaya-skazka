@@ -114,11 +114,11 @@ const Hero = () => {
         </p>
 
         <div className="relative z-10 flex flex-col gap-10 px-[18px] pb-24 pt-10 md:pl-[18px] md:pt-9 xl:pl-[246px]">
-          <div className="rise max-w-[600px]">
-            <h1 className="font-head text-[40px] font-normal italic leading-[1.08] md:text-[51px]">
-              Уютные мастер-классы по созданию флорариумов и венков своими руками
+          <div className="rise max-w-[760px]">
+            <h1 className="font-head text-[44px] font-medium italic leading-[1.02] tracking-[-0.01em] drop-shadow-[0_2px_24px_hsl(var(--background)/0.8)] md:text-[68px]">
+              Уютные мастер-классы по созданию <span className="text-primary">флорариумов и венков</span> своими руками
             </h1>
-            <p className="mt-4 max-w-[520px] leading-[1.35] tracking-[0.02em] text-foreground">
+            <p className="mt-5 max-w-[480px] leading-[1.45] tracking-[0.01em] text-foreground/85">
               Создай вечную композицию из мха и сухоцветов. Выдохни, выпей горячего травяного чая и наполни дом уютом, который не требует полива.
             </p>
             <button onClick={() => go("signup")} className="editorial-link mt-[18px]">

@@ -86,7 +86,7 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
-    font-size: 19px;
+    font-size: 16px;
     overflow-x: hidden;
   }
 }
@@ -94,8 +94,19 @@
 @layer components {
   .hero-glow {
     background:
-      radial-gradient(120% 70% at 70% 118%, hsl(var(--glow)) 0%, hsl(272 29% 31%) 38%, transparent 78%),
-      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 30%, hsl(var(--glow-deep)) 78%, hsl(var(--glow)) 100%);
+      radial-gradient(
+        120% 70% at 70% 118%,
+        hsl(var(--glow)) 0%,
+        hsl(272 29% 31%) 38%,
+        transparent 78%
+      ),
+      linear-gradient(
+        180deg,
+        hsl(var(--background)) 0%,
+        hsl(var(--background)) 30%,
+        hsl(var(--glow-deep)) 78%,
+        hsl(var(--glow)) 100%
+      );
   }
   .hero-photo-mask {
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
@@ -116,7 +127,9 @@
   .reveal {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s ease;
   }
   .reveal.is-visible {
     opacity: 1;
@@ -125,10 +138,22 @@
 }
 
 @keyframes rise {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rise, .reveal { animation: none; opacity: 1; transform: none; transition: none; }
+  .rise,
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
